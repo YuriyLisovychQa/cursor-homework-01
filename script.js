@@ -1,6 +1,7 @@
 const salmon = 15.678;
 const bread = 123.965;
 const tomato = 90.2345;
+const moneyCustomer = 500;
 const maxProductPrice = Math.max(salmon, bread, tomato);
 console.log("Maximal product price = " + maxProductPrice);
 
@@ -26,7 +27,7 @@ function boolean(sumProducts) {
 
 console.log(boolean(sumProducts));
 
-const rest = (moneyCustomer - sumPrice).toFixed(2);
+const rest = (moneyCustomer - sumProducts).toFixed(2);
 console.log("Rest = " + rest);
 
 const averageProductsValue = ((salmon + bread + tomato) / 3).toFixed(2);
@@ -45,12 +46,12 @@ const table = document.getElementById("table-result");
 const firstRow = table.insertRow(0);
 
 const names = ["Salmon price", "Bread price", "Tomato price",
-  "Max price", "Min price",
-  "Sum products", "Sum floor", "Sum round", "Boolean", "Rest",
+  "Max price", "Min price", "Sum products",
+  "Sum floor", "Sum round", "Boolean", "Rest",
   "Average products value", "Discount", "Profit income"
 ];
 
-names.forEach(element => firstRow.insertCell(names.indexOf(element)).innerHTML = element)
+names.forEach(element => firstRow.insertCell(names.indexOf(element)).innerHTML = element);
 
 const secondRow = table.insertRow(1);
 
