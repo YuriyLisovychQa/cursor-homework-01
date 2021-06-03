@@ -26,6 +26,9 @@ function boolean(sumProducts) {
 
 console.log(boolean(sumProducts));
 
+const rest = (moneyCustomer - sumPrice).toFixed(2);
+console.log("Rest = " + rest);
+
 const averageProductsValue = ((salmon + bread + tomato) / 3).toFixed(2);
 console.log("Average products value = " + averageProductsValue);
 
@@ -43,7 +46,7 @@ const firstRow = table.insertRow(0);
 
 const names = ["Salmon price", "Bread price", "Tomato price",
   "Max price", "Min price",
-  "Sum products", "Sum floor", "Sum round", "Boolean",
+  "Sum products", "Sum floor", "Sum round", "Boolean", "Rest",
   "Average products value", "Discount", "Profit income"
 ];
 
@@ -53,7 +56,7 @@ const secondRow = table.insertRow(1);
 
 const digits = [salmon, bread, tomato,
   maxProductPrice, minProductPrice, sumProducts, sumFloor, sumRound,
-  boolean(sumProducts), averageProductsValue, discount, incomeProfit
+  boolean(sumProducts), rest, averageProductsValue, discount, incomeProfit
 ];
 
 digits.forEach(element => secondRow.insertCell(digits.indexOf(element)).innerHTML = element);
