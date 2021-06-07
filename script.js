@@ -1,14 +1,14 @@
-const salmon = 15.678;
-const bread = 123.965;
-const tomato = 90.2345;
+const SALMON_PRICE = 15.678;
+const BREAD_PRICE = 123.965;
+const TOMATO_PRICE = 90.2345;
 const moneyCustomer = 500;
-const maxProductPrice = Math.max(salmon, bread, tomato);
+const maxProductPrice = Math.max(SALMON_PRICE, BREAD_PRICE, TOMATO_PRICE);
 console.log("Maximal product price = " + maxProductPrice);
 
-const minProductPrice = Math.min(salmon, bread, tomato);
+const minProductPrice = Math.min(SALMON_PRICE, BREAD_PRICE, TOMATO_PRICE);
 console.log("Minimal product price = " + minProductPrice);
 
-const sumProducts = salmon + bread + tomato;
+const sumProducts = SALMON_PRICE + BREAD_PRICE + TOMATO_PRICE;
 console.log("Products sum = " + sumProducts);
 
 const sumFloor = Math.floor(sumProducts);
@@ -21,17 +21,17 @@ const isNumberEven = sumFloor % 2 === 0;
 console.log(isNumberEven ? 'Number is odd' : 'Number is even');
 
 
-const rest = (moneyCustomer - sumProducts).toFixed(2);
+const rest = +((moneyCustomer - sumProducts).toFixed(2));
 console.log("Rest = " + rest);
 
 
-const averageProductsValue = ((salmon + bread + tomato) / 3).toFixed(2);
+const averageProductsValue = +((SALMON_PRICE + BREAD_PRICE + TOMATO_PRICE) / 3).toFixed(2);
 console.log("Average products value = " + averageProductsValue);
 
-const discount = Math.random().toFixed(2) * 100;
+const discount = +(Math.random().toFixed(2) * 100);
 console.log("Discount = " + discount + " %");
 
-const incomeProfit = ((sumProducts / 2) - discount).toFixed(2);
+const incomeProfit = +((sumProducts / 2) - discount).toFixed(2);
 console.log("Price with discount = " + incomeProfit);
 
 //Advanced
@@ -50,7 +50,7 @@ names.forEach(element => firstRow.insertCell(names.indexOf(element)).innerHTML =
 
 const secondRow = table.insertRow(1);
 
-const digits = [salmon, bread, tomato,
+const digits = [SALMON_PRICE, BREAD_PRICE, TOMATO_PRICE,
   maxProductPrice, minProductPrice, sumProducts, sumFloor, sumRound,
     isNumberEven, rest, averageProductsValue, discount, incomeProfit
 ];
